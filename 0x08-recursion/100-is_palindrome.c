@@ -6,9 +6,9 @@ int is_palindrome(char *s) {
     
     for (int i = 0; i < len / 2; i++) {
         if (s[i] != s[len - 1 - i]) {
-            return 0;  // If characters don't match, not a palindrome
+            return 0;
         }
     }
 
-    return 1;  // If all characters matched, it's a palindrome
+    return 1;
 }
