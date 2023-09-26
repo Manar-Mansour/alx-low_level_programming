@@ -1,5 +1,5 @@
 #include "lists.h"
-#include "stdlib.h"
+
 /**
  * free_listint - A function that frees a linked list
  * @head: A pointer to listint_t structure
