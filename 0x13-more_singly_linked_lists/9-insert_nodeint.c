@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include "stdlib.h"
 /**
  * insert_nodeint_at_index - A function that inserts node at given index
  * @head: A pointer to listint_t structure
