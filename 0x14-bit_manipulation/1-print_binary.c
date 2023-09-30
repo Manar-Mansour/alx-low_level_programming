@@ -7,21 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-    unsigned long int mask = 1UL << 63;  // Initialize a mask to the leftmost bit
+    unsigned long int mask = 1UL << 63; 
 
     if (n == 0)
     {
-        putchar('0');  // If n is 0, print '0' and return
+        _putchar('0'); 
         return;
     }
 
     while (mask > 0)
     {
-        if (n & mask)  // Check if the current bit is set
-            putchar('1');
+        if (n & mask)  
+            _putchar('1');
         else
-            putchar('0');
+            _putchar('0');
 
-        mask >>= 1;  // Shift the mask to the right
+        mask >>= 1;  
     }
 }
