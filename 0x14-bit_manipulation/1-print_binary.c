@@ -7,22 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int flag = 0, max = 32768; /* 1000 0000 0000 0000 */
+    unsigned long int mask = 1UL << 63;  // Initialize a mask to the leftmost bit
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	while (max)
-	{
-		if (flag == 1 && (n & max) == 0)
-			_putchar('0');
-		else if ((n & max) != 0)
-		{
-			_putchar('1');
-			flag = 1;
-		}
-		max >>= 1;
-	}
+    if (n == 0)
+    {
+        putchar('0');  // If n is 0, print '0' and return
+        return;
+    }
+
+    while (mask > 0)
+    {
+        if (n & mask)  // Check if the current bit is set
+            putchar('1');
+        else
+            putchar('0');
+
+        mask >>= 1;  // Shift the mask to the right
+    }
 }
